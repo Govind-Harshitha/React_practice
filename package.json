@@ -1,0 +1,34 @@
+{
+  "name": "@pxblue/react-components",
+  "version": "1.1.1",
+  "description": "React components for PX Blue applications",
+  "scripts": {
+    "test": "cd components && yarn test",
+    "test:artifacts": "bash ./buildTest.sh",
+    "build": "cd components && yarn && yarn build",
+    "link:components": "bash ./linkComponents.sh",
+    "install:dependencies": "cd component-demo/showcase && yarn && cd ../storybook && yarn && cd ../..",
+    "start:showcase": "yarn install:dependencies && yarn link:components && cd component-demo/showcase && yarn start",
+    "start:storybook": "yarn install:dependencies && yarn link:components && cd component-demo/storybook && yarn start",
+    "start": "yarn start:showcase"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pxblue/component-library.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "pxblue"
+  ],
+  "author": "pxblue <pxblue@eaton.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/pxblue/component-library/issues"
+  },
+  "homepage": "https://github.com/pxblue/component-library#readme",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  }
+}
